@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 const states = require("./data/states.json");
-const items = Object.values(states).slice(0, 50);
+const items = Object.values(states).slice(0, 20);
 
 ReactDOM.render(
   <App items={items} />,
