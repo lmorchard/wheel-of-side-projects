@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# ignore package-lock.json for now because I hate it
+package-lock.json
+
 # testing
 /coverage
 
@@ -19,3 +22,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# ignore css artifacts produced by sass
+src/**/*.css
