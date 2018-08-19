@@ -1,0 +1,45 @@
+ul.wheel {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  left: 0px;
+  top: 450px;
+  transform-origin: center left;
+  animation: spin 7000ms ease-in-out infinite;
+
+  li {
+    position: relative;
+    padding: 0em 1.5em;
+    transform-origin: center left;
+
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #dcf;
+      padding: 0.5em 1em;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  18% { transform: rotate(-180deg); }
+  80% { transform: rotate(380deg); }
+  95% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@for $count from 1 through 50 {
+  ul.wheel-count-#{$count} {
+    li {
+      padding-left: 0.5em * $count;
+    }
+    @for $nth from 1 through $count {
+      li:nth-child(#{$nth}) {
+        transform: rotate(($nth - 1) * (360 / $count) * 1deg);
+      }
+    }
+  }
+}
