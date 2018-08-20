@@ -1,0 +1,28 @@
+- Rust invaders
+- Tempest repair
+- Space trucker 3D tunnel
+- ActivityPub Lambda
+- Single-serving ActivityPub
+- Rewrite blog software
+- Revise About Me
+- Embed uIEC/SD into C64
+- Game dev - Pico8
+- Feed reader add-on
+- Music tinkering
+- Recap old computers
+- Web outliner
+- GraphQL tinkering
+- Repair Atari tape drives
+- Update SBBS
+- Self-host fTelnet on BBS
+- Atari 800 composite video cable
+- WHDLoader on Amiga 1200
+- Apple serial interface
+- Twitch chat bot & overlay
+- Stream sound board
+- Centipede monitor adjustments
+- Learn Kotlin
+- Gamechord as OBS Controller
+- Stream sign-off scene
+- Scuttlebut tinkering?
+- Self-hosted / distributed Twitch?

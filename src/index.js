@@ -5,10 +5,16 @@ import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 const states = require("./data/states.json");
-const items = Object.values(states).slice(0, 20);
 
-ReactDOM.render(
-  <App items={items} />,
-  document.getElementById('root')
-);
+fetch("./items.txt")
+  .then(response => response.text())
+  .then(itemsTxt => {
+    const items = Object.values(itemsTxt.split(/\n/)).slice(0, 20);
+
+    ReactDOM.render(
+      <App items={items} />,
+      document.getElementById('root')
+    );
+  });
+
 registerServiceWorker();

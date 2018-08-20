@@ -8,7 +8,7 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "npm-run-all --parallel watch:css watch:react",
+    "start": "npm-run-all --parallel watch:css:chokidar watch:react",
     "build": "npm-run-all build:css build:react",
     "build:react": "react-scripts build",
     "watch:react": "react-scripts start",

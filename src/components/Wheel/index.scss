@@ -3,7 +3,8 @@ ul.wheel {
   padding: 0;
   position: absolute;
   left: 0px;
-  top: 450px;
+  top: 50%;
+  width: 100%;
   transform-origin: center left;
   animation: spin 7000ms ease-in-out infinite;
 
@@ -16,9 +17,12 @@ ul.wheel {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #dcf;
+      color: #fff;
+      text-shadow: 2px 2px #111;
+      //background-color: #324;
       padding: 0.5em 1em;
       width: 100%;
+      font-size: 1.5em;
     }
   }
 }
@@ -34,7 +38,7 @@ ul.wheel {
 @for $count from 1 through 50 {
   ul.wheel-count-#{$count} {
     li {
-      padding-left: 0.5em * $count;
+      padding-left: 0.33em * $count;
     }
     @for $nth from 1 through $count {
       li:nth-child(#{$nth}) {
