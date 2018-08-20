@@ -5,10 +5,10 @@ import Wheel from "../Wheel";
 
 class App extends Component {
   render() {
-    const { items } = this.props;
+    const { items, itemChoice } = this.props;
     return (
       <div className="App">
-        <Wheel items={items} />
+        <Wheel items={items} itemChoice={itemChoice} />
       </div>
     );
   }

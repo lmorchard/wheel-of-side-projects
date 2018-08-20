@@ -11,8 +11,14 @@ fetch("./items.txt")
   .then(itemsTxt => {
     const items = Object.values(itemsTxt.split(/\n/)).slice(0, 20);
 
+    const itemAngle = 360 / items.length;
+    const itemChoice = Math.floor(Math.random() * items.length);
+
+    const style = document.documentElement.style;
+    style.setProperty("--targetAngle", `${720 - (itemAngle * itemChoice)}deg`);
+
     ReactDOM.render(
-      <App items={items} />,
+      <App items={items} itemChoice={itemChoice} />,
       document.getElementById('root')
     );
   });

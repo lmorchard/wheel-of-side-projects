@@ -1,17 +1,22 @@
+:root {
+  --targetAngle: 0deg;
+}
+
 ul.wheel {
   list-style: none;
   padding: 0;
   position: absolute;
-  left: 0px;
+  left: 0%;
   top: 50%;
-  width: 100%;
+  width: 24em;
   transform-origin: center left;
-  animation: spin 7000ms ease-in-out infinite;
+  animation: spin 5000ms ease-in-out infinite;
 
   li {
     position: relative;
     padding: 0em 1.5em;
     transform-origin: center left;
+    width: 24em;
 
     span {
       position: absolute;
@@ -19,10 +24,11 @@ ul.wheel {
       transform: translateY(-50%);
       color: #fff;
       text-shadow: 2px 2px #111;
-      //background-color: #324;
       padding: 0.5em 1em;
-      width: 100%;
-      font-size: 1.5em;
+      font-size: 1.25em;
+    }
+    &.selected span {
+      background-color: #324;
     }
   }
 }
@@ -30,9 +36,9 @@ ul.wheel {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   18% { transform: rotate(-180deg); }
-  80% { transform: rotate(380deg); }
-  95% { transform: rotate(360deg); }
-  100% { transform: rotate(360deg); }
+  80% { transform: rotate(calc(var(--targetAngle) + 10deg)); }
+  95% { transform: rotate(calc(var(--targetAngle))); }
+  100% { transform: rotate(calc(var(--targetAngle))); }
 }
 
 @for $count from 1 through 50 {
