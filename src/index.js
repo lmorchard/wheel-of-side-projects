@@ -4,21 +4,17 @@ import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
-const states = require("./data/states.json");
+// const states = require("./data/states.json");
 
 fetch("./items.txt")
   .then(response => response.text())
   .then(itemsTxt => {
-    const items = Object.values(itemsTxt.split(/\n/)).slice(0, 20);
-
-    const itemAngle = 360 / items.length;
-    const itemChoice = Math.floor(Math.random() * items.length);
-
-    const style = document.documentElement.style;
-    style.setProperty("--targetAngle", `${720 - (itemAngle * itemChoice)}deg`);
+    const items = itemsTxt.split(/\n/)
+      .slice(0, 20)
+      .map(item => item.substr(2));
 
     ReactDOM.render(
-      <App items={items} itemChoice={itemChoice} />,
+      <App items={items} />,
       document.getElementById('root')
     );
   });

@@ -1,5 +1,6 @@
 :root {
   --targetAngle: 0deg;
+  --prevTargetAngle: 0deg;
 }
 
 ul.wheel {
@@ -10,13 +11,12 @@ ul.wheel {
   top: 50%;
   width: 24em;
   transform-origin: center left;
-  animation: spin 5000ms ease-in-out infinite;
 
   li {
     position: relative;
     padding: 0em 1.5em;
     transform-origin: center left;
-    width: 24em;
+    width: 50em;
 
     span {
       position: absolute;
@@ -25,20 +25,43 @@ ul.wheel {
       color: #fff;
       text-shadow: 2px 2px #111;
       padding: 0.5em 1em;
-      font-size: 1.25em;
+      font-size: 1em;
+      transition: font-size 500ms ease;
     }
-    &.selected span {
-      background-color: #324;
-    }
+  }
+
+  &.anim-idle {
+    // animation: idle 10000ms linear infinite;
+  }
+
+  &.anim-spinning {
+    animation: spin 5000ms ease-in-out;
+  }
+
+  &.anim-chosen {
+    transform: rotate(calc(var(--targetAngle)));
+  }
+
+  &.anim-chosen li.selected {
+    z-index: 999;
+  }
+  &.anim-chosen li.selected span {
+    border-radius: 15px;
+    font-size: 3em;
+    background-color: #324;
   }
 }
 
-@keyframes spin {
+@keyframes idle {
   0% { transform: rotate(0deg); }
-  18% { transform: rotate(-180deg); }
-  80% { transform: rotate(calc(var(--targetAngle) + 10deg)); }
-  95% { transform: rotate(calc(var(--targetAngle))); }
-  100% { transform: rotate(calc(var(--targetAngle))); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(calc(var(--prevTargetAngle))); }
+  20% { transform: rotate(calc(var(--prevTargetAngle) - 40deg)); }
+  80% { transform: rotate(calc(var(--targetAngle) + 1100deg)); }
+  100% { transform: rotate(calc(var(--targetAngle) + 1080deg)); }
 }
 
 @for $count from 1 through 50 {
