@@ -24,8 +24,8 @@ class App extends Component {
     const { spinStart, itemChoice } = this.state;
 
     return (
-      <div className="App">
-        <button onClick={this.handleSpin}>Spin the wheel!</button>
+      <div className="App" onClick={this.handleSpin}
+           title="Click anywhere to spin the wheel">
         <Wheel {...{ items, itemChoice, spinStart }} />
       </div>
     );

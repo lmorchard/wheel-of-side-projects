@@ -1,3 +1,10 @@
+- Twitch chat bot & overlay
+- Twitch chatbot for Chipmachine song requests
+- Stream sound board
+- Simple web hosting
+- Learn me some Google Cloud functions
+- About me - stop per-panel scrolling on mobile
+- Check out neocities.org
 - Rust invaders
 - Tempest repair
 - Space trucker 3D tunnel
@@ -18,8 +25,6 @@
 - Atari 800 composite video cable
 - WHDLoader on Amiga 1200
 - Apple serial interface
-- Twitch chat bot & overlay
-- Stream sound board
 - Centipede monitor adjustments
 - Learn Kotlin
 - Gamechord as OBS Controller
