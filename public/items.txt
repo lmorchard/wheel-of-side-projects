@@ -1,3 +1,6 @@
+- Web Workers learning
+- WebAssembly learning
+- Add a Speaker to PocketC.H.I.P.
 - Twitch chat bot & overlay
 - Twitch chatbot for Chipmachine song requests
 - Stream sound board
@@ -11,6 +14,7 @@
 - ActivityPub Lambda
 - Single-serving ActivityPub
 - Rewrite blog software
+- Blog / web page comments on AWS Lambda
 - Revise About Me
 - Embed uIEC/SD into C64
 - Game dev - Pico8
